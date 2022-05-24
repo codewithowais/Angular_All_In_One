@@ -1,0 +1,64 @@
+
+<!-- <table class="table" >
+  <thead class="thead-dark">
+    <tr>
+    <th>ID</th>
+    <th>Title</th>
+    <th>price</th>
+    
+    <th>category</th>
+    
+    <th>description</th>
+    <th>image</th>
+    <th>rating</th>
+  </tr>
+  </thead>
+<tbody>
+  <tr *ngFor="let d of list">
+    <td>{{d.id}}</td>
+    <td >
+      {{d.title}}
+    </td>
+  <td >
+    {{d.price}}
+  </td>
+  <td >
+    {{d.category}}
+  </td>
+  
+  <td >
+    {{d.description}}
+  </td>
+  <td >
+    <img  src="{{d.image}}" width="100">
+
+  </td>
+  <td >
+    {{d.rating.rate + '/5 (' + d.rating.count+')' }}
+  </td>
+  
+
+  </tr>
+</tbody>
+</table> -->
+
+ <table class="table" > 
+  <thead class="thead-dark">
+    <tr>
+    <th>ID</th>   
+    <th>Title</th>   
+    <th>category</th>   
+  </tr>
+  </thead>
+<tbody>
+  <tr *ngFor="let c of catname">
+    <td>{{c[0].id}}</td>  
+    <td>{{c[0].title}}</td>  
+    <td>{{c[0].category}}</td>  
+  </tr>
+</tbody>
+</table> 
+
+                            		
+
+ 

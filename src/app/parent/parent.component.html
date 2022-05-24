@@ -1,0 +1,42 @@
+
+<div class="container border p-3  m-5 row d-flex justify-content-around">
+    <p>Parent</p>
+    <div class="col-md-5 border rounded border-info container-fluid" >
+        <h2 class="">User</h2>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                  <th scope="col">User Name</th>
+                  <th scope="col">Action</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let d of userlist">
+                    <td #ru id="a">{{d}}</td>
+                    <td style="color:red" (click)="remuser(ru)">Remove</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-5 border  rounded border-info container-fluid" >
+        <h2>Admin</h2>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                  <th scope="col">Admin Name</th>
+                  <th scope="col">Action</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let d of adminlist">
+                      <td id="ad" #r>{{d}}</td>
+                      <td style="color:red" (click)="remuser(r)">Remove</td>
+                  </tr>
+              </tbody>
+        </table>
+    </div>
+</div>
+<app-child [uplace]="uplace" [aplace]="aplace" (aval)="fun($event)" [alc]="alc" [ulc]="ulc"></app-child>

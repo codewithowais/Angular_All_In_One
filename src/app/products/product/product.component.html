@@ -1,0 +1,35 @@
+<div class="container"><h1 >{{name}}</h1></div>
+
+
+<div class="container mydiv ">
+    <div class="row d-flex">
+        <div  class="col-md-3" *ngFor="let a of product;">
+            <!-- ye --><a href="">
+            <div class="bbb_deals">
+                <div class="ribbon ribbon-top-right "><span><small class="cross">x </small>4</span></div>
+                <div class="bbb_deals_title col-md-9">{{a.category}}</div>
+                <div class="bbb_deals_slider_container col-md-3">
+                    <div class=" bbb_deals_item">
+                        <div class="bbb_deals_image "><img class="img" src="{{a.image}}" alt=""></div>
+                        <div class="bbb_deals_content">
+                           
+                            <div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+                                <div class="bbb_deals_item_name tit">{{a.title}}</div>
+                              
+                            </div>
+                            <div class="available">
+                                <div class="available_line d-flex flex-row justify-content-start">
+                                    <div class="available_title " ><div class="des"><p>{{a.description}}</p> </div><a href="">More</a></div>
+                                    <div class="sold_stars ml-auto"> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> <i class="fa fa-star"></i> </div>
+                                </div>
+                                <div class="available_bar"><span style="width:17%"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div></a>
+        </div>
+     
+    
+    </div>
+</div>
