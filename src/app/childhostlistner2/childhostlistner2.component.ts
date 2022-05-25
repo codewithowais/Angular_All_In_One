@@ -11,5 +11,7 @@ export class Childhostlistner2Component implements OnInit {
 
   ngOnInit(): void {
   }
-
+  numSequence(n: number): Array<number> {
+    return Array(n);
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-hostlistner',
@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hostlistner.component.css']
 })
 export class HostlistnerComponent implements OnInit {
-
-  constructor() { }
+cls:string="jq"
+  constructor(private el:ElementRef) { }
 
   ngOnInit(): void {
+   
   }
+  onChange(event:any)
+  {
+    
 
+    if(event==true){
+
+    }else{
+
+    
+    }
+   
+  }
 }
