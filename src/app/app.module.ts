@@ -14,6 +14,12 @@ import { SubC1Component } from './subjectB/sub-c1/sub-c1.component';
 import { SubC2Component } from './subjectB/sub-c2/sub-c2.component';
 import { SubC3Component } from './subjectB/sub-c3/sub-c3.component';
 import { SubC4Component } from './subjectB/sub-c4/sub-c4.component';
+import { CustomDirective } from './custom.directive';
+import { CustomDirecComponent } from './custom-direc/custom-direc.component';
+import { HostlistnerComponent } from './hostlistner/hostlistner.component';
+import { HostlistnerDirective } from './hostlistner.directive';
+import { Childhostlistner1Component } from './childhostlistner1/childhostlistner1.component';
+import { Childhostlistner2Component } from './childhostlistner2/childhostlistner2.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +32,13 @@ import { SubC4Component } from './subjectB/sub-c4/sub-c4.component';
     SubC1Component,
     SubC2Component,
     SubC3Component,
-    SubC4Component
+    SubC4Component,
+    CustomDirective,
+    CustomDirecComponent,
+    HostlistnerComponent,
+    HostlistnerDirective,
+    Childhostlistner1Component,
+    Childhostlistner2Component
   ],
   imports: [
     BrowserModule,

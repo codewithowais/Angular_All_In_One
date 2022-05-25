@@ -16,5 +16,6 @@ constructor(private serv:GetapiService) {
   }
 click(v:any){
   this.serv.subvalue.next(v.value)
+  this.serv.color.next(v.value)
 }
 }
