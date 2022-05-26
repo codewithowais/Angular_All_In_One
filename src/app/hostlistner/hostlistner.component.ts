@@ -17,8 +17,9 @@ cls:string="jq"
     
 
     if(event==true){
-
+      console.log('chk')
     }else{
+      console.log('unchk')
 
     
     }
