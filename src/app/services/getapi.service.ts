@@ -8,6 +8,7 @@ export class GetapiService {
 category:any[]=[];
 category1:any;
 color=new BehaviorSubject("red");
+cls=new Subject();
 catname=new Subject();
 subvalue=new BehaviorSubject("subvalue");
   constructor(private http:HttpClient) { }

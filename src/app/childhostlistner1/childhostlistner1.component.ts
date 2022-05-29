@@ -11,22 +11,23 @@ export class Childhostlistner1Component implements OnInit {
   constructor() { }
 @Input() cls:any;
   ngOnInit(): void {
-    $('.jq').hover(function(){ 
-      this.style.background='green'
-    }
-      )
-      $('.jq').mouseout(function(){ 
-        this.style.background='white'
-      }
-        )
+   
   }
   numSequence(n: number): Array<number> {
     return Array(n);
   }
-  @HostListener('click', ['$event.target']) fn(e:any){
+  @HostListener('mouseover', ['$event.target']) fn(e:any){
     console.log(this.cls)
-    e.style.background='red'
+    if(e.classList.contains("jq"))
+    e.style.background='pink'
    
    
     }
+    @HostListener('mouseout', ['$event.target']) fn2(e:any){
+      
+      if(e.class=="jq")
+      e.style.background='brown'
+     
+     
+      }
 }

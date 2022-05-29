@@ -1,4 +1,6 @@
 import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
+import { GetapiService } from '../services/getapi.service';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-hostlistner',
@@ -7,22 +9,54 @@ import { Component, ElementRef, HostListener, OnInit } from '@angular/core';
 })
 export class HostlistnerComponent implements OnInit {
 cls:string="jq"
-  constructor(private el:ElementRef) { }
+clear:any
+  constructor(private el:ElementRef , private serv:GetapiService) { }
 
   ngOnInit(): void {
-   
-  }
-  onChange(event:any)
-  {
-    
+    $( document ).ready(function() {
+     
+    ///
+      function onhostlistner(){
+        
+        $('.jq').mouseover(function(){ 
+          $('.jq').css("background","pink")
+        }
+          )
+          $('.jq').mouseout(function(){ 
+            $('.jq').css("background","brown")
+          }
+            )
+      }
+      onhostlistner();
 
-    if(event==true){
-      console.log('chk')
+    
+      }); 
+  
+      }
+
+  onChange(event:any)  
+  {
+   if(event==true){
+      
+      $(".jq").off("mouseover");
+      $(".jq").off("mouseleave");
+     
+         
+
     }else{
-      console.log('unchk')
+      
+      $('.jq').mouseover(function(){ 
+        $('.jq').css("background","pink")
+      }
+        )
+        $('.jq').mouseout(function(){ 
+          $('.jq').css("background","brown")
+        }
+          )
 
     
     }
    
   }
+  
 }

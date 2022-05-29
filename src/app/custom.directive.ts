@@ -18,6 +18,8 @@ color:string="red"
       elem.nativeElement.style.background=this.color;
     
     })
+
+  
   
   }
 
