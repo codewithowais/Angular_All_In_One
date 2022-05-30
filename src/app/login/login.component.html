@@ -1,0 +1,31 @@
+<div class="container border-info rounded border main">
+<h1 class="text-center">Login</h1>
+
+      <form  [formGroup]="myForm" (ngSubmit)="onsubmit()">
+        <!-- Email input -->
+        <div class="input-group mb-3 form-group" >
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">User</span>
+            </div>
+            <input type="text" class="form-control " placeholder="Username" formControlName="email">
+          </div>
+      
+        <!-- Password input -->
+        <div class="input-group mb-3 form-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Pass</span>
+            </div>
+            <input type="password" class="form-control " placeholder="Password" formControlName="password">
+          </div>
+      
+
+      
+        <!-- Submit button --><div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block mb-4 form-control">Sign in</button>
+
+        </div>
+    
+        
+      </form>
+</div>
+

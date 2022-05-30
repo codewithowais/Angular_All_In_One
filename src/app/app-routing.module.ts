@@ -5,10 +5,12 @@ import { CustomDirecComponent } from './custom-direc/custom-direc.component';
 import { CustomDirective } from './custom.directive';
 import { GetapiComponent } from './getapi/getapi.component';
 import { HostlistnerComponent } from './hostlistner/hostlistner.component';
+import { LoginComponent } from './login/login.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ParentComponent } from './parent/parent.component';
 import { AllcategoryComponent } from './products/allcategory/allcategory.component';
 import { ProductComponent } from './products/product/product.component';
+
 
 const routes: Routes = [
   { path: '', component: ParentComponent  },
@@ -20,6 +22,7 @@ const routes: Routes = [
 },
 { path: 'cusdir', component:CustomDirecComponent},
 { path: 'hostlistner', component:HostlistnerComponent},
+{ path: 'login', component:LoginComponent},
 
   { path: '**', component: PageNotFoundComponent },
 ];
