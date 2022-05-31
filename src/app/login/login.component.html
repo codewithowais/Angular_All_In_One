@@ -23,8 +23,15 @@
             Invalid Email or Password!
            </div>
       
+<<<<<<< HEAD
         <!-- Submit button --><div class="form-group mt-1">
         <button type="submit" class="btn btn-primary btn-block mb-4 form-control">Sign in</button>
+=======
+          <span class="text-danger" *ngif="email.touched">Login Failed!</span>
+      
+        <!-- Submit button --><div class="form-group">
+        <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary btn-block my-2 form-control">Sign in</button>
+>>>>>>> ac6a49e5709322c7c09d7bd758152e9d56ee8a8a
 
         </div>
     
