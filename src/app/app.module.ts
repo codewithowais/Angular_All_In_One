@@ -21,7 +21,7 @@ import { HostlistnerDirective } from './hostlistner.directive';
 import { Childhostlistner1Component } from './childhostlistner1/childhostlistner1.component';
 import { Childhostlistner2Component } from './childhostlistner2/childhostlistner2.component';
 import { LoginComponent } from './login/login.component';
-import { FormGroup, FormsModule , ReactiveFormsModule } from '@angular/forms';
+import {   ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -48,7 +48,7 @@ import { FormGroup, FormsModule , ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
+   
     ReactiveFormsModule 
   ],
   providers: [],

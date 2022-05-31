@@ -16,11 +16,14 @@
               <span class="input-group-text" id="basic-addon1">Pass</span>
             </div>
             <input type="password" class="form-control " placeholder="Password" formControlName="password">
+            
           </div>
+          <!-- <span class="text-danger " *ngIf="email && email.invalid && email.touched  || pas && pas.invalid && pas.touched">Invalid Email or Password! </span> -->
+          <div class="error text-danger" *ngIf="myForm.hasError('ee')">
+            Invalid Email or Password!
+           </div>
       
-
-      
-        <!-- Submit button --><div class="form-group">
+        <!-- Submit button --><div class="form-group mt-1">
         <button type="submit" class="btn btn-primary btn-block mb-4 form-control">Sign in</button>
 
         </div>

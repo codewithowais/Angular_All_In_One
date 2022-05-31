@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,FormGroup, Validators } from '@angular/forms';
+import { FormBuilder,FormGroup, Validators,FormControl } from '@angular/forms';
+import { empty } from 'rxjs';
 
 @Component({
   selector: 'app-login',
@@ -24,13 +25,24 @@ export class LoginComponent implements OnInit {
    
   }
   onsubmit(): void {
-    if(this.myForm.value){
+    if(this.myForm.valid){
 
-    console.log(this.myForm.value)
-
+      localStorage.setItem('user', this.myForm.value.email)
+      console.log(localStorage.getItem('user'))
+     
+    }
+    else{
+      this.myForm.setErrors({...this.myForm.errors, 'ee': true });
+      return;
     }
     // Process checkout data here
   
+  }
+  get email(){
+    return this.myForm.get('email')
+  }
+  get pas(){
+    return this.myForm.get('password')
   }
 
 }
