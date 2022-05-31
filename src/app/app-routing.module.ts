@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'product', loadChildren:()=>import('../app/products/products.module').then(m => m.ProductsModule)
   ,canLoad: [AuthGuard] },
 { path: 'subject', loadChildren:()=>import('../app/subjectB/subjectB.module').then(m => m.SubjectBModule)
-,canActivate: [AuthGuard]},
+,canLoad: [AuthGuard]},
 { path: 'cusdir', component:CustomDirecComponent,canActivate: [AuthGuard]},
 { path: 'hostlistner', component:HostlistnerComponent,canActivate: [AuthGuard]},
 { path: 'login', component:LoginComponent},
