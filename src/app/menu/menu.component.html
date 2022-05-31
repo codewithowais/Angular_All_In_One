@@ -1,6 +1,6 @@
 <div  class=" d-flex container">
 <nav><ul class="nav nav-tabs">
-    <li class="nav-link"><a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="/Ex1" >Exercise 1</a></li>
+    <li class="nav-link"><a class="nav-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="" >Exercise 1</a></li>
     <li class="nav-link"><a class="nav-link" routerLinkActive="active" routerLink="/getapi">Get Api</a></li>
     <li class="nav-link"><a class="nav-link" routerLinkActive="active" routerLink="/product">Products</a></li>
     <li class="nav-link"><a class="nav-link" routerLinkActive="active" routerLink="/subject">Subject</a></li>
@@ -15,5 +15,9 @@
 
 
 </nav>
-<a class="lg btn-pull-right" routerLink="/login">Login</a>
+<div class="lg btn-pull-right">
+  <a  routerLink="/login" *ngIf="log">Login</a>
+<a  routerLink="/logout" *ngIf="!log" [skipLocationChange]="true"  >Logout</a>
+</div>
+
 </div>
