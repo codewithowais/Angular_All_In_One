@@ -40,5 +40,15 @@ this.route.navigate(['login'], {queryParams:{ur:route.path}, skipLocationChange:
   }
     return false
 }
+canDeactivate(
+  
+  currentRoute: ActivatedRouteSnapshot,
+  currentState: RouterStateSnapshot,
+  nextState: RouterStateSnapshot
+): Observable<boolean|UrlTree>|Promise<boolean|UrlTree>|boolean|UrlTree {
+ 
+  return window.confirm('Are you sure logout from here?')
+  //return this.permissions.canDeactivate(this.currentUser, route.params.id);
+}
 
 }
